@@ -1,0 +1,125 @@
+
+html{
+	overflow-y: hidden;
+}
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	/* background: linear-gradient(to right, #4CAF50, #2196F3 ); */
+	background-image: url("/download.jpg");
+	background: #223843;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.container {
+	text-align: center;
+}
+
+.weather-card {
+	background-color:#eff1f3;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	 transform: skewY(10deg);
+	width: 400px;
+	height: 400px;
+	animation-name:border ;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+
+}
+.weather-card:hover{
+	transform: skewY(0deg);
+}
+@keyframes border{
+	0%{
+		border-left: 2px solid red;
+	}
+	25%{
+		border-top: 2px solid red;
+	}
+	50%{
+		border-right: 2px solid red;
+	}
+	100%{
+		border-bottom: 2px solid red;
+	}
+}
+#city-input {
+	padding: 15px;
+	margin: 10px 0;
+	width: 70%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+#city-input:focus {
+	outline: none;
+	border-color: #6021f3;
+}
+
+#city-input::placeholder {
+	color: #aaa;
+}
+
+#city-input-btn {
+	padding: 10px;
+	background-color: #000000;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#city-input-btn:hover {
+	background-color: #1565C0;
+}
+
+#weather-info {
+	display: none;
+}
+
+#weather-icon {
+	width: 100px;
+	height: 100px;
+}
+
+#temperature {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 8px 0;
+}
+
+#description {  
+	    font-size: 18px;
+    margin-left: -73%;
+    margin-top: -5%;
+	font-size: 17px;
+    
+}
+
+#wind-speed {
+	
+    font-size: 16px;
+    color: #223843;
+    margin-left: -71%;}
+
+#date {
+    top: 11%;
+	left: 30%;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 800;
+	color: #223843;
+}
